@@ -4,7 +4,9 @@
 #html CSS styling
 
 body {
-background: image_url('hero_cliff.jpg')
+background: image_url('cork-board.png');
+/* Helvetica/Arial-based sans serif stack */
+font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
@@ -34,7 +36,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 800px;
+  height: 370px;
   box-shadow: 0px 3px 8px #2a2a2a;
 }
 
@@ -57,4 +59,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn{
     border-radius: 0;
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
