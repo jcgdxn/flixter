@@ -12,7 +12,7 @@ class Instructor::SectionsController < ApplicationController
 
     private
 
-    def sections_params
+    def section_params
       params.require(:section).permit(:title)
     end
 end
