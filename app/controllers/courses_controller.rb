@@ -1,4 +1,4 @@
-/* student courses controller */
+# /* student courses' controller */
 
 class CoursesController < ApplicationController
       def index
