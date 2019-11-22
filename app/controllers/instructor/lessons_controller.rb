@@ -1,4 +1,4 @@
-# /* Instructo's Course Page */
+# /* Instructor's Course Page */
 
 class Instructor::LessonsController < ApplicationController
   before_action :authenticate_user!
