@@ -12,8 +12,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
     uploader = ImageUploader
-    uploader.store!(temple_)
-    uploader.retrieve_from_store!('temple_.jpg')
+    uploader.store!(my_file)
+    uploader.retrieve_from_store!('my_file.jpg')
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
