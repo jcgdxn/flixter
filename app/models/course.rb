@@ -3,6 +3,7 @@ belongs_to  :user
 has_many :sections
 has_many :lessons
 has_many :images
+has_many :enrollments
 
 validates :title, presence: true
 validates :description, presence: true
