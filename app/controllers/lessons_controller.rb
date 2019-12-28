@@ -1,14 +1,14 @@
 #/* student's Course Page */
 class LessonsController < ApplicationController
-  #before_action :authenticate_user!
-  #before_action :require_authorized_for_current_lesson.section.course, only: [:show]
+  before_action :authenticate_user!
+  before_action :require_authorized_for_current_lesson, only: [:show]
 
-  #def require_authorized_for_current_lesson.section.course
-  #  if current_course.user != current_user
-  #    redirect_to root_url, alert: 'Error Message Here'
-  #    render plain: "Unauthorized", status: :unauthorized
-  #  end
-  #end
+  def require_authorized_for_current_lesson
+    if current_user.enrolled_in?current_lesson.section.course
+      redirect_to current_lesson_path, alert: 'ERROR: Looks like you need to Enroll'
+      #render plain: "Unauthorized", status: :unauthorized
+    end
+  end
 
 
 
