@@ -6,6 +6,4 @@
     }
 
 
-    def stripeAPI
       Stripe.api.key = Rails.configuration.stripe[:secret_key]
-    end
