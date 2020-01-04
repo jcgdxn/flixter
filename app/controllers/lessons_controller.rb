@@ -8,7 +8,7 @@ class LessonsController < ApplicationController
       redirect_to course_path(current_lesson.section.course), alert: 'ERROR: Looks like you need to Enroll'
       #render plain: "Unauthorized", status: :unauthorized
     #else
-    #  redirect_to current_lesson.section.course
+    #  redirect_to current_lesson.section.course {hierarchial rev path to re-eval User choice}
 
     end
   end

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
     resources :courses, only: [:index, :show] do
       resources :enrollments, only: :create
+      resources :charges    #so users can access 'charges' controller, added this route to file to stripe.com docs
     end
     resources :lessons, only: [:show]
       namespace :instructor do
