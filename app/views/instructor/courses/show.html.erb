@@ -1,21 +1,29 @@
 
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>hide demo</title>
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-</head>
+                                        <!-- <!doctype html>
+                                        <html lang="en">
+                                        <head>
+                                          <meta charset="utf-8">
+                                          <title>hide demo</title>
+                                          <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+                                        </head> -->
 
 <script>
   $(function() {
-    // alert('hi');
-    // $('.lessons li').hide('slow');
+                                          // alert('hi');
+                                          // $('.lessons li').hide('slow');
     $('.lessons').sortable({
       update: function( event, ui ) {
-          alert(ui.item.index());
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { lesson: { row_order_position: ui.item.index() } }
+        });
       }
+                                          // alert("UpdateUrl: " + ui.item.data('update-url') + " Index: " + ui.item.index());
+                                          // alert(ui.item.index());
+                                          // }
     });
   });
 </script>
@@ -45,7 +53,7 @@
                   <ul class="lesson">
 
                       <% section.lessons.rank(:row_order).each do |lesson| %>
-                          <li>
+                          <li data-update-url="<%= instructor_lesson_path(lesson) %>">
                             <b><%= lesson.title %></b>
                             -
                             <%= lesson.subtitle %>
