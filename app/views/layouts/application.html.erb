@@ -34,15 +34,18 @@
                             <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
                           </li>
 
+                          <% else %>
+
                           <li class="nav-item active">
                             <% if user_signed_in? %>
+                              <li class="nav-item">
+                                <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
+                              </li>
+
                             <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
                           </li>
 
-                          <li class="nav-item">
-                            <a class="nav-link disabled" href="#">enroll</a>
-                          </li>
-                  </ul>
+                      </ul>
 
                     <form class="form-inline my-2 my-lg-0">
                       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -75,7 +78,7 @@
     </div>
   </div>
 
-      <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>             
+      <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
       <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>
 </html>

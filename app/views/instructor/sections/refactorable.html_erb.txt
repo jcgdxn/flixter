@@ -1,5 +1,5 @@
-
-<br />
+<%# code for future refactoring %>
+<!-- <br />
 <div class="booyah-box col-10 offset-1">
   <h1> Add a new Section</h1>
     <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
@@ -9,4 +9,4 @@
     <br />
     <br />
   <% end %>
-</div>
+</div> -->
