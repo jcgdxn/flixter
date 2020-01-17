@@ -40,9 +40,9 @@
                             <% if user_signed_in? %>
                               <li class="nav-item">
                                 <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
-                              </li>
 
-                            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                                <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+                              </li>
                           </li>
 
                       </ul>
@@ -98,11 +98,9 @@
             <br />
             Cambridge MA, 02113
           </div>
-        <div class="col-12 col-sm-3">
+        <div class="col-12 col-sm-3 social">
           <b>Social</b>
-          <br />
-          <br />
-          <%= link_to 'http://github.com/jcgdxn' do %>
+          <%= link_to 'https://github.com/jcgdxn' do %>
             <span class="fa fa-github-square fa-2x social-button"></span>
           <% end %>
           <span class="fa fa-facebook-square fa-2x social-button"></span>
